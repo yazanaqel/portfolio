@@ -1,165 +1,333 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+    <head>
+        <met#aeb3b8et="utf-8">
+        <title>Yazan Akel</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
 
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
 
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>yazan-akel</title>
-  </head>
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <body>
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <header class="header">
-      <a href="https://yazanaqel.github.io/portfolio/" class="logo" style="cursor: pointer;">Yazan Akel</a>
-      <i class='bx bx-menu' id="menu-icon" style="cursor: pointer;"></i>
-      <nav class="navbar">
-        <a href="#home" class="active">{<i class='bx bx-home-alt-2'></i>} home</a>
-        <a href="#about">{<i class='bx bx-info-square'></i>} about</a>
-        <a href="#services">{<i class='bx bx-cog' ></i>} services</a>
-        <a href="#portfolio">{<i class='bx bx-code-alt'></i>} projects</a>
-        <a href="#contact">{<i class='bx bx-phone'></i>} contact</a>
-        <a style="cursor: pointer;" id="theme-switcher">{<i class='bx bxs-sun'></i>} go light</a>
-      </nav>
-    </header>
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
 
-    <section class="home" id="home">
-      <div class="home-content">
-        <h3>Hello, It's Me</h3>
-        <h1>Yazan Akel</h1>
-        <h3>And I'm <span>.NET Developer</span></h3>
-        <p>.Net Developer is a software engineer who builds applications using the .Net framework and Microsoft technology to write code for web, mobile, desktop, cloud, machine learning, game development, and more. also have skills in database design like SqlServer, web development tools, testing frameworks, and cloud services.</p>
-        <div>
-          
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
         </div>
-        <div class="social-media">
-          
-          <a href="https://github.com/yazanaqel" target="_blank"><i class='bx bxl-github'></i></a>
-          <a href="https://www.linkedin.com/in/yazan-aqel-3660ab203/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-          <a href="https://t.me/+963931644863" target="_blank"><i class='bx bxl-telegram'></i></a>
-          
-        </div>
+        <!-- Spinner End -->
 
-        <a href="download/Yazan_Akel_CV.pdf" download="Yazan_Akel_CV.pdf" class="btn">See Resume</a>
-      </div>
-      <div class="home-img">
-        <img src="images/Dotnet.png" alt="">
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <div class="about-img">
-        <img src="images/CSharp.png" alt="">
-      </div>
-      <div class="about-content">
-        <h2 class="heading">About <span>Me</span></h2>
-        <h3>.NET Developer</h3>
-        <p>
-          I am a creative and skilled developer with two years of experience in designing and developing websites using
-           .NET and C#.
-           I am eager to learn new technologies and tools that can enhance my web development skills.
-        </p>
-      </div>
-    </section>
-
-    <section class="services" id="services">
-
-      <h2 class="heading">Our <span>Services</span></h2>
-
-      <div class="services-container">
-        <div class="services-box">
-          <i class='bx bx-code-curly'></i>
-          <h3>MVC Pattern</h3>
-          <br/>
-          <a href="#contact" class="btn">Ask for it!</a>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 sticky-lg-top vh-100">
+                    <div class="d-flex flex-column h-100 text-center overflow-auto shadow">
+                        <img class="w-100 img-fluid mb-4" src="img/profile.jpg" alt="Image">
+                        <h1 class="text-primary mt-2">Yazan Akel</h1>
+                        <div class="mb-4" style="height: 22px;">
+                            <h4 class="typed-text-output d-inline-block text-light"></h4>
+                            <div class="typed-text d-none">{ /..*../ }</div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-auto mb-3">
+                            <a class="btn btn-secondary btn-square mx-1" href="https://github.com/yazanaqel" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="btn btn-secondary btn-square mx-1" href="https://www.linkedin.com/in/yazan-aqel-3660ab203/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-secondary btn-square mx-1" href="https://t.me/+963931644863" target="_blank"><i class="fab fa-telegram"></i></a>
+                        </div>
+                        <div class="d-flex align-items-end justify-content-between border-top">
+                            <a href="download/Yazan_Akel_CV.pdf" download="Yazan_Akel_CV.pdf" class="btn w-50 border-end">See Resume</a>
+                            <a href="#contact" class="btn w-50 btn-scroll">Contact Me</a>
+                        </div>
+                    </div>
                 </div>
+                <div class="col-lg-8">
+                    <!-- About Start -->
+                    <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="title pb-3 mb-5">About Me</h1>
+                        <p>C# Backend Developer with experience in building scalable, maintainable, and high performance systems.</p>
+                        <div class="row mb-4">
+                            <div class="col-sm-6 py-1">
+                                <span class="fw-medium text-primary">Name:</span> Yazan Akel
+                            </div>
+                            <div class="col-sm-6 py-1">
+                                <span class="fw-medium text-primary">Birthday:</span> 2 Jan 1994
+                            </div>
+                            <div class="col-sm-6 py-1">
+                                <span class="fw-medium text-primary">Phone:</span> +963-931644863
+                            </div>
+                            <div class="col-sm-6 py-1">
+                                <span class="fw-medium text-primary">Email:</span> yazan.aqel93@gmail.com
+                            </div>
+                            <div class="col-sm-6 py-1">
+                                <span class="fw-medium text-primary">Address:</span> Midan, Damascus, SY
+                            </div>
+                            <div class="col-sm-6 py-1">
+                                <span class="fw-medium text-primary">Degree:</span> Bachelor's degree in Information Technology (BAIT) 
+                            </div>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-md-4 col-lg-6 col-xl-4">
+                                <div class="d-flex bg-secondary p-4">
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">3</h1>
+                                    <div class="ps-3">
+                                        <p class="mb-0">Years of</p>
+                                        <h5 class="mb-0">Experience</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- About End -->
 
-        <div class="services-box">
-          <i class='bx bx-transfer'></i>
-          <h3>RESTFul APIs</h3>
-          <br/>
-          <a href="#contact" class="btn">Ask for it!</a>
+                    <!-- Expericence Start -->
+                    <section class="py-5 wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="title pb-3 mb-5">Expericence</h1>
+                        <div class="border-start border-2 border-light pt-2 ps-5">
+                            <div class="position-relative mb-4">
+                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+                                <h5 class="mb-1">Web Developer, C# Full Stack</h5>
+                                <p class="mb-2">Future IT Solutions  - <small>[ 10 Jun 2024 - 1 Jul 2025 ]</small></p>
+                                <p>
+                                    Using dependency injection pattern to manage the dependencies between
+different components and services in applications.<br/>
+Using also the middleware architecture of ASP.NET Core to customize the request
+pipeline and add features such as authentication, logging, error handling, and
+caching.<br/>
+Engaged in full-stack development using Blazor and MudBlazor frameworks,
+enhancing user interface design and performance.<br/>
+Implemented clean architecture principles to ensure scalable, maintainable
+codebases.<br/>
+Collaborated with cross-functional teams to deliver high-quality software solutions
+on tight deadlines.<br/>
+Leveraged extensive C# expertise to optimize backend functionalities and improve
+system integrations.
+                                </p>
+                            </div>
+                            <div class="position-relative mb-4">
+                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+                                <h5 class="mb-1">Web Developer, C# Full Stack</h5>
+                                <p class="mb-2">NOIR - <small>[ 9 Apr 2022 - 1 Mar 2024 ]</small></p>
+                            <p>
+                                Developed and maintained web applications using C#, ASP .NET MVC Pattern and
+Razor Pages.<br/>
+Designed and developed database schemas, stored procedures.<br/>
+Using LINQ to manipulate data from various sources.<br/>
+Write expressive and efficient queries using LINQ syntax or lambda expressions,
+and use LINQ extension methods on the repositories.
+
+                            </p> 
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Expericence End -->
+
+                    <!-- Skills Start -->
+                    <!-- <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="title pb-3 mb-5">Skills</h1>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">C#</p>
+                                        <p class="mb-2">95%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">Blazor</p>
+                                        <p class="mb-2">85%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">RESTFul APIs</p>
+                                        <p class="mb-2">90%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">ASP.NET Core</p>
+                                        <p class="mb-2">95%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">MVC Pattern</p>
+                                        <p class="mb-2">85%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section> -->
+                    <!-- Skills End -->
+
+                    <!-- Services Start -->
+                    <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="title pb-3 mb-5">Services</h1>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <i class="fa fa-2x fa-laptop-code mx-auto mb-4"></i>
+                                    <h5 class="mb-2">Blazor Full Web Application</h5>
+                                    <p class="mb-0"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <i class="fa-3x bi-arrow-left-right mx-auto mb-4"></i>
+                                    <h5 class="mb-2">RESTFul APIs</h5>
+                                    <p class="mb-0"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Services End -->
+
+                    <!-- Portfolio Start -->
+                    <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="title pb-3 mb-5">Portfolio</h1>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row portfolio-container">
+<!-- 
+
+                                    <div class="col-md-6 mb-4 portfolio-item first">
+                                        <div class="position-relative overflow-hidden mb-2">
+                                            <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
+                                            <div class="portfolio-btn d-flex align-items-center justify-content-center">
+                                                <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                                                    <i class="bi bi-plus text-light"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Contact Start -->
+                    <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="contact">
+                        <h1 class="title pb-3 mb-5">Contact Me</h1>
+                        <form class="mailForm" action="#">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="txtName form-control border-0 bg-secondary" id="name" placeholder="Your Name" required>
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" class="txtTel form-control border-0 bg-secondary" id="number" placeholder="Your Number" required>
+                                        <label for="number">Your Number</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-floating">
+                                        <input type="email" class="txtMail form-control border-0 bg-secondary" id="email" placeholder="Your Email" required>
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="txtSubject form-control border-0 bg-secondary" id="subject" placeholder="Subject" required>
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="txtMessage form-control border-0 bg-secondary" placeholder="Leave a message here" id="message" style="height: 200px" required></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <input type="submit" value="Send Message" class="btn btn-primary w-100 py-3">
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                    <!-- Contact End -->
+
+                    <!-- Footer Start -->
+                    <section class="wow fadeIn" data-wow-delay="0.1s">
+                        <div class="bg-secondary text-light text-center p-5">
+                            <div class="d-flex justify-content-center mb-4">
+                                <a class="btn btn-dark btn-square mx-1" href="https://github.com/yazanaqel" target="_blank"><i class="fab fa-github"></i></a>
+                                <a class="btn btn-dark btn-square mx-1" href="https://www.linkedin.com/in/yazan-akel-3660ab203/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-dark btn-square mx-1" href="https://t.me/+963931644863" target="_blank"><i class="fab fa-telegram"></i></a>
+                            </div>							
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							<p class="m-0"> 2026 by Yazan | Damascus - Syria.</a></p>
+                        </div>
+                    </section>
+                    <!-- Footer End -->
+                </div>
+            </div>
         </div>
 
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-        <div class="services-box">
-          <i class='bx bxl-microsoft'></i>
-          <h3>Blazor Full Web App</h3>
-          <br/>
-        <a href="#contact" class="btn">Ask for it!</a>
-              </div>
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
 
-      </div>
-
-    </section>
-
-    <section class="portfolio" id="portfolio">
-      <h2 class="heading">Latest <span>Projects</span></h2>
-      <div class="portfolio-container">
-
-        <div class="portfolio-box">
-          <img src="images/projects/LibrarySys.jpeg" alt="">
-          <div class="portfolio-layer">
-            <h4>Library System</h4>
-            <p>MVC web application for a library.</p>
-            <a href="https://github.com/yazanaqel/LibrarySystem.git" target="_blank"><i class='bx bx-link-external'></i></a>
-          </div>
-        </div>
-
-          <div class="portfolio-box">
-          <img src="images/projects/rental/rentalCar.jpg" alt="">
-          <div class="portfolio-layer">
-            <h4>Rental Car</h4>
-            <p>MVC web application for rent a car.</p>
-            <a href="https://github.com/yazanaqel/RentalCar.git" target="_blank"><i class='bx bx-link-external'></i></a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <h2 class="heading">Contact <span>Me</span></h2>
-
-      <form class="mailForm" action="#">
-        <div class="input-box">
-          <input class="txtName" type="text" placeholder="Full Name" required>
-          <input class="txtMail" type="email" placeholder="Email Address" required>
-        </div>
-        <div class="input-box">
-          <input class="txtTel" type="number" placeholder="Mobile Number" required>
-          <input class="txtSubject" type="text" placeholder="Email Subject" required>
-        </div>
-        <textarea class="txtMessage" name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
-        <input type="submit" value="Send Message" class="btn">
-      </form>
-
-    </section>
-
-    <footer class="footer">
-      <div class="footer-text">
-        <p>Copyright &copy; 2023 by Yazan | Damascus - Syria.</p>
-      </div>
-      <div class="footer-iconTop">
-        <a href="#home"><i class='bx bx-chevron-up'></i></a>
-      </div>
-    </footer>
-
-
-    
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <!-- <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script> -->
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
-    <script src="functions.js"></script>
-  </body>
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
 </html>
