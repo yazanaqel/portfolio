@@ -1,123 +1,95 @@
-(function ($) {
-    "use strict";
+jQuery(document).ready(function($) {
 
-    // Spinner
-    var spinner = function () {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 1);
-    };
-    spinner();
-    
-    
-    // Initiate the wowjs
-    new WOW().init();
+	'use strict';
 
-
-    // Facts counter
-    $('[data-toggle="counter-up"]').counterUp({
-        delay: 10,
-        time: 2000
-    });
-
-
-    // Typed Initiate
-    if ($('.typed-text-output').length == 1) {
-        var typed_strings = $('.typed-text').text();
-        var typed = new Typed('.typed-text-output', {
-            strings: typed_strings.split(', '),
-            typeSpeed: 100,
-            backSpeed: 20,
-            smartBackspace: false,
-            loop: true
-        });
-    }
-
-
-    // Smooth scrolling to section
-    $(".btn-scroll").on('click', function (event) {
-        if (this.hash !== "") {
-            event.preventDefault();
+        $(window).load(function() { // makes sure the whole site is loaded
+            $(".seq-preloader").fadeOut(); // will first fade out the loading animation
+            $(".sequence").delay(500).fadeOut("slow"); // will fade out the white DIV that covers the website.
+        })
+      
+        
+        $(function() {
+  
+        function showSlide(n) {
+            // n is relative position from current slide
+          
+            // unbind event listener to prevent retriggering
+            $body.unbind("mousewheel");
+          
+            // increment slide number by n and keep within boundaries
+            currSlide = Math.min(Math.max(0, currSlide + n), $slide.length-1);
             
-            $('html, body').animate({
-                scrollTop: $(this.hash).offset().top - 0
-            }, 1500, 'easeInOutExpo');
+            var displacment = window.innerWidth*currSlide;
+            // translate slides div across to appropriate slide
+            $slides.css('transform', 'translateX(-' + displacment + 'px)');
+            // delay before rebinding event to prevent retriggering
+            setTimeout(bind, 700);
+            
+            // change active class on link
+            $('nav a.active').removeClass('active');
+            $($('a')[currSlide]).addClass('active');
+            
         }
-    });
-    
-    
-    // Skills
-    $('.skill').waypoint(function () {
-        $('.progress .progress-bar').each(function () {
-            $(this).css("width", $(this).attr("aria-valuenow") + '%');
+      
+        function bind() {
+             $body.bind('false', mouseEvent);
+          }
+      
+        function mouseEvent(e, delta) {
+            // On down scroll, show next slide otherwise show prev slide
+            showSlide(delta >= 0 ? -1 : 1);
+            e.preventDefault();
+        }
+        
+        $('nav a, .main-btn a').click(function(e) {
+            var href = $(this).attr('href');
+            // Allow normal behavior for non-slide links (external URLs / file downloads)
+            if (!href || href.indexOf('#') !== 0) {
+                return;
+            }
+            // When internal slide link clicked, find slide it points to
+            var newslide = parseInt(href[1], 10);
+            if (isNaN(newslide)) {
+                return;
+            }
+            // find how far it is from current slide
+            var diff = newslide - currSlide - 1;
+            showSlide(diff); // show that slide
+            e.preventDefault();
         });
-    }, {offset: '80%'});
+      
+        $(window).resize(function(){
+          // Keep current slide to left of window on resize
+          var displacment = window.innerWidth*currSlide;
+          $slides.css('transform', 'translateX(-'+displacment+'px)');
+        });
+        
+        // cache
+        var $body = $('body');
+        var currSlide = 0;
+        var $slides = $('.slides');
+        var $slide = $('.slide');
+      
+        // give active class to first link
+        $($('nav a')[0]).addClass('active');
+        
+        // add event listener for mousescroll
+        $body.bind('false', mouseEvent);
+    })        
 
 
-    // Portfolio isotope and filter
-    var portfolioIsotope = $('.portfolio-container').isotope({
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-    });
-    $('#portfolio-flters li').on('click', function () {
-        $("#portfolio-flters li").removeClass('active');
-        $(this).addClass('active');
-
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
-    });
+        $('#form-submit .date').datepicker({
+        });
 
 
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1500,
-        dots: true,
-        loop: true,
-        items: 1
-    });
-    
-    
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
-})(jQuery);
+        $(window).on("scroll", function() {
+            if($(window).scrollTop() > 100) {
+                $(".header").addClass("active");
+            } else {
+                //remove the background property so it comes transparent again (defined in your css)
+               $(".header").removeClass("active");
+            }
+        });
 
-const form = document.querySelector('.mailForm');
-  
-function SendMessage(e){
-  e.preventDefault();
 
-  namee = document.querySelector('.txtName');
-  tel = document.querySelector('.txtTel');
-  sub = document.querySelector('.txtSubject');
-  email = document.querySelector('.txtMail');
-  msg = document.querySelector('.txtMessage');
-
-Email.send({
-SecureToken : "5564c1bf-e522-4572-9320-55559193007d",
-To : 'yazan.aqel93@gmail.com',
-From : 'yazanakel107@gmail.com',
-Subject : 'From portfolio',
-Body : namee.value + '<br><hr/>'+sub.value+ '<br><hr/>' + email.value + '<br><hr/>' + msg.value + '<br><hr/>' + tel.value
-}).then(
-message => alert('thank you for emailing me :)'));
-  
-  namee.value='';
-      tel.value='';
-      sub.value = '';
-      email.value = '';
-      msg.value = '';
-}
-
-form.addEventListener('submit',SendMessage);
+});
